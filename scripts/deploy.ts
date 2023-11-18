@@ -10,7 +10,7 @@ async function main() {
   const Lock = await ethers.getContractFactory("Lock");
   const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
 
-  await lock.deployed();
+  await lock.deployed(); #lock deployer delay
 
   console.log(`Lock with 0.00000001 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`);
   // console.log(`Block explorer URL: https://l2scan.scroll.io/address/${lock.address}`); Uncomment here to use the pre-alpha
